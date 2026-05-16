@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Premium Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Advertisement -->
+    <div class="marquee-top">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=80&h=50&fit=crop" alt="Property">
+                <span>Luxury Villas - 20% OFF</span>
+                <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=80&h=50&fit=crop" alt="Property">
+                <span>Premium Apartments - Book Now</span>
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&h=300&fit=crop" alt="Property">
+                <span>Free Site Visit - Limited Offer</span>
+                <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=80&h=50&fit=crop" alt="Property">
+                <span>0% Brokerage on Select Properties</span>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=80&h=50&fit=crop" alt="Property">
+                <span>EMI Starting at ₹25,000/month</span>
+                <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=500&h=300&fit=crop" alt="Property">
+                <span>Call Now: +91-98765-43210</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-building"></i> Real Estate
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#buy-properties">Buy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rent-properties">Rent</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video-showcase">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#recentOffcanvas"><i class="bi bi-clock-history"></i> Recent</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="bi bi-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-envelope"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bi bi-person"></i> Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Favorites <span id="favCountBadge" class="badge bg-danger rounded-pill">0</span></a></li>
+                </ul>
+                <button class="dark-toggle ms-3" id="darkModeToggle"><i class="bi bi-moon-fill"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="hero-section">
+        <div class="hero-video-container">
+            <video controls autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/begin.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="fade-up">
+            <h1 class="display-5 fw-bold"><i class="bi bi-house-heart-fill"></i> Find Your Dream Home</h1>
+            <p>75+ Properties | Luxury Villas | Premium Apartments | Smart Investment</p>
+            <div class="hero-stats">
+                <div class="stat" data-aos="zoom-in" data-aos-delay="100"><i class="bi bi-building"></i> 75+ Properties</div>
+                <div class="stat" data-aos="zoom-in" data-aos-delay="200"><i class="bi bi-people"></i> 500+ Happy Clients</div>
+                <div class="stat" data-aos="zoom-in" data-aos-delay="300"><i class="bi bi-star-fill"></i> 4.8 Rating</div>
+            </div>
+            <div class="hero-buttons mt-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#buy-properties" class="btn btn-success btn-lg me-2"><i class="bi bi-search"></i> Buy Properties</a>
+                <a href="#rent-properties" class="btn btn-success btn-lg me-2"><i class="bi bi-cash-stack"></i> Rent Properties</a>
+                <a href="#" class="btn btn-outline-light btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-headset"></i> Contact Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="video-showcase" class="video-showcase-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2><i class="bi bi-play-circle-fill"></i> Property Video Showcase</h2>
+                <p>Watch and explore our premium properties in action</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="showcase-card">
+                        <div class="showcase-video">
+                            <video controls autoplay loop preload="metadata" poster="images/goapic.png">
+                                <source src="videos/goa1.mp4" type="video/mp4">
+                                Your browser does not support video.
+                            </video>
+                        </div>
+                        <div class="showcase-info">
+                            <h5>Luxury Villa in Goa</h5>
+                            <p>4 BHK | Sea View | ₹4.25Cr</p>
+                            <button class="btn btn-sm btn-outline-success showcase-detail-btn" data-property-id="villa-goa">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="showcase-card">
+                        <div class="showcase-video">
+                            <video controls autoplay loop preload="metadata" poster="images/mumbaipic.png">
+                                <source src="videos/mumbai1.mp4" type="video/mp4">
+                                Your browser does not support video.
+                            </video>
+                        </div>
+                        <div class="showcase-info">
+                            <h5>Premium Apartment Mumbai</h5>
+                            <p>2 BHK | City View | ₹1.5Cr</p>
+                            <button class="btn btn-sm btn-outline-success showcase-detail-btn" data-property-id="apt-mumbai">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="showcase-card">
+                        <div class="showcase-video">
+                            <video controls autoplay loop preload="metadata" poster="images/delhipic.png">
+                                <source src="videos/delhi1.mp4" type="video/mp4">
+                                Your browser does not support video.
+                            </video>
+                        </div>
+                        <div class="showcase-info">
+                            <h5>Penthouse in Delhi</h5>
+                            <p>3 BHK | Luxury Living | ₹3.2Cr</p>
+                            <button class="btn btn-sm btn-outline-success showcase-detail-btn" data-property-id="penthouse-delhi">See Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Properties Section -->
+    <section id="buy-properties" class="container mb-5">
+        <div class="section-header text-center" data-aos="fade-up">
+            <h2><i class="bi bi-cart-check-fill"></i> Properties for Sale</h2>
+            <p>Find your perfect home to buy</p>
+        </div>
+        
+        <div class="filter-card" data-aos="fade-down">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-search"></i> Search</label>
+                    <input type="text" id="searchTitleBuy" class="form-control" placeholder="Search by title...">
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-geo-alt-fill"></i> Location</label>
+                    <select id="locationFilterBuy" class="form-select"><option value="all">All Locations</option></select>
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-door-closed"></i> Bedrooms</label>
+                    <select id="bedroomFilterBuy" class="form-select">
+                        <option value="any">Any</option><option value="1">1 BHK</option><option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option><option value="4">4+ BHK</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-cash-stack"></i> Price Range (₹)</label>
+                    <div id="priceSliderBuy" style="margin: 10px 0 15px 0;"></div>
+                    <div class="d-flex justify-content-between small">
+                        <span id="minPriceLabelBuy">₹0</span><span id="maxPriceLabelBuy">₹10Cr</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-sort-down"></i> Sort By</label>
+                    <select id="sortSelectBuy" class="form-select">
+                        <option value="default">Default</option><option value="lowToHigh">Price: Low to High</option>
+                        <option value="highToLow">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-rulers"></i> Area (sq ft)</label>
+                    <div class="d-flex gap-2">
+                        <input type="number" id="minAreaBuy" class="form-control" placeholder="Min" value="0">
+                        <input type="number" id="maxAreaBuy" class="form-control" placeholder="Max" value="10000">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-building"></i> Property Type</label>
+                    <select id="propertyTypeBuy" class="form-select">
+                        <option value="all">All Types</option>
+                        <option value="Apartment">Apartment</option><option value="Villa">Villa</option>
+                        <option value="Studio">Studio</option><option value="Penthouse">Penthouse</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="filter-label"><i class="bi bi-grid-3x3-gap-fill"></i> Amenities</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check"><input class="form-check-input amenity-check-buy" type="checkbox" value="Swimming Pool" id="amenityPoolBuy"><label class="form-check-label">Pool</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-buy" type="checkbox" value="Gym" id="amenityGymBuy"><label class="form-check-label">Gym</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-buy" type="checkbox" value="Parking" id="amenityParkingBuy"><label class="form-check-label">Parking</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-buy" type="checkbox" value="Security" id="amenitySecurityBuy"><label class="form-check-label">Security</label></div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button id="resetFiltersBuy" class="reset-btn w-100"><i class="bi bi-arrow-repeat"></i> Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+            <h5><i class="bi bi-house-door-fill"></i> <span id="propertyCountBuy">0</span> Properties Found</h5>
+            <div class="d-flex gap-2">
+                <button id="compareBtnBuy" class="btn btn-sm btn-outline-primary"><i class="bi bi-bar-chart"></i> Compare (<span id="compareCountBuy">0</span>)</button>
+                <button id="exportCSVBtnBuy" class="btn btn-sm btn-outline-info"><i class="bi bi-file-spreadsheet"></i> Export CSV</button>
+            </div>
+        </div>
+
+        <div id="propertiesGridBuy" class="row g-4"></div>
+        
+        <div class="d-flex justify-content-center mt-4">
+            <nav><ul class="pagination" id="paginationBuy"></ul></nav>
+        </div>
+    </section>
+
+    <!-- Rent Properties Section -->
+    <section id="rent-properties" class="container mb-5">
+        <div class="section-header text-center" data-aos="fade-up">
+            <h2><i class="bi bi-house-check-fill"></i> Properties for Rent</h2>
+            <p>Find your perfect rental home</p>
+        </div>
+        
+        <div class="filter-card" data-aos="fade-down">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-search"></i> Search</label>
+                    <input type="text" id="searchTitleRent" class="form-control" placeholder="Search by title...">
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-geo-alt-fill"></i> Location</label>
+                    <select id="locationFilterRent" class="form-select"><option value="all">All Locations</option></select>
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-door-closed"></i> Bedrooms</label>
+                    <select id="bedroomFilterRent" class="form-select">
+                        <option value="any">Any</option><option value="1">1 BHK</option><option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-cash-stack"></i> Rent Range (₹/month)</label>
+                    <div id="priceSliderRent" style="margin: 10px 0 15px 0;"></div>
+                    <div class="d-flex justify-content-between small">
+                        <span id="minPriceLabelRent">₹0</span><span id="maxPriceLabelRent">₹5L</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="filter-label"><i class="bi bi-sort-down"></i> Sort By</label>
+                    <select id="sortSelectRent" class="form-select">
+                        <option value="default">Default</option><option value="lowToHigh">Rent: Low to High</option>
+                        <option value="highToLow">Rent: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-3">
+                    <label class="filter-label"><i class="bi bi-building"></i> Property Type</label>
+                    <select id="propertyTypeRent" class="form-select">
+                        <option value="all">All Types</option>
+                        <option value="Apartment">Apartment</option><option value="Studio">Studio</option>
+                        <option value="Penthouse">Penthouse</option>
+                    </select>
+                </div>
+                <div class="col-md-7">
+                    <label class="filter-label"><i class="bi bi-grid-3x3-gap-fill"></i> Amenities</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check"><input class="form-check-input amenity-check-rent" type="checkbox" value="Swimming Pool" id="amenityPoolRent"><label class="form-check-label">Pool</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-rent" type="checkbox" value="Gym" id="amenityGymRent"><label class="form-check-label">Gym</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-rent" type="checkbox" value="Parking" id="amenityParkingRent"><label class="form-check-label">Parking</label></div>
+                        <div class="form-check"><input class="form-check-input amenity-check-rent" type="checkbox" value="Furnished" id="amenityFurnishedRent"><label class="form-check-label">Furnished</label></div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button id="resetFiltersRent" class="reset-btn w-100"><i class="bi bi-arrow-repeat"></i> Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+            <h5><i class="bi bi-house-door-fill"></i> <span id="propertyCountRent">0</span> Properties Found</h5>
+            <div class="d-flex gap-2">
+                <button id="compareBtnRent" class="btn btn-sm btn-outline-primary"><i class="bi bi-bar-chart"></i> Compare (<span id="compareCountRent">0</span>)</button>
+                <button id="exportCSVBtnRent" class="btn btn-sm btn-outline-info"><i class="bi bi-file-spreadsheet"></i> Export CSV</button>
+            </div>
+        </div>
+
+        <div id="propertiesGridRent" class="row g-4"></div>
+        
+        <div class="d-flex justify-content-center mt-4">
+            <nav><ul class="pagination" id="paginationRent"></ul></nav>
+        </div>
+    </section>
+
+    <!-- Image Marquee Bottom Advertisement -->
+    <div class="marquee-bottom">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=80&h=50&fit=crop" alt="Property">
+                <span>🔥 HOT DEALS: 2 BHK starting at ₹45L!</span>
+                <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=80&h=50&fit=crop" alt="Property">
+                <span>🏆 Best Real Estate Platform 2024</span>
+                <img src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZXxlbnwwfHwwfHx8MA%3D%3D" alt="Property">
+                <span>💰 Zero brokerage on select properties</span>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=80&h=50&fit=crop" alt="Property">
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="3000">
+            <div class="toast-header bg-success text-white">
+                <i class="bi bi-envelope-paper-fill me-2"></i>
+                <strong class="me-auto">Notification</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toastMessage"></div>
+        </div>
+    </div>
+
+    <!-- Property Detail Modal -->
+    <div class="modal fade" id="propertyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalTitle">Property Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Compare Modal -->
+    <div class="modal fade" id="compareModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Compare Properties</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="compareBody"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="recentOffcanvas">
+        <div class="offcanvas-header">
+            <h5><i class="bi bi-clock-history"></i> Recently Viewed</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="recentList"></div>
+            <button id="clearAllRecent" class="btn btn-danger btn-sm w-100 mt-3">Clear All Recent</button>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title"><i class="bi bi-info-circle-fill"></i> About Real Estate</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="bi bi-building" style="font-size: 4rem; color: #2d6a4f;"></i>
+                    <h3>Real Estate</h3>
+                    <p>India's Most Trusted Real Estate Platform</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6"><h6><i class="bi bi-flag-fill"></i> Our Mission</h6><p>To provide transparent, hassle-free real estate solutions.</p></div>
+                        <div class="col-md-6"><h6><i class="bi bi-trophy-fill"></i> Achievements</h6><p>500+ Happy Clients | 75+ Properties | 4.8 Rating</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title "><i class="bi bi-person-circle"></i> Login / Register</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="authTab" role="tablist">
+                        <li class="nav-item"><button class="nav-link active bg-dark" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Login</button></li>
+                        <li class="nav-item"><button class="nav-link bg-dark " id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Register</button></li>
+                    </ul>
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane fade show active" id="login">
+                            <input type="email" class="form-control mb-2" id="loginEmail" placeholder="Email">
+                            <input type="password" class="form-control mb-2" id="loginPassword" placeholder="Password">
+                            <button class="btn btn-success w-100" id="doLogin">Login</button>
+                        </div>
+                        <div class="tab-pane fade" id="register">
+                            <input type="text" class="form-control mb-2" id="regName" placeholder="Full Name">
+                            <input type="email" class="form-control mb-2" id="regEmail" placeholder="Email">
+                            <input type="password" class="form-control mb-2" id="regPassword" placeholder="Password">
+                            <input type="number" class="form-control mb-2" id="regPhone" placeholder="Phone Number">
+                            <button class="btn btn-success w-100" id="doRegister">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title"><i class="bi bi-envelope"></i> Contact Us</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +91-98765-43210</p>
+                    <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> support@RealEstate.com</p>
+                    <hr>
+                    <input type="text" id="contactName" class="form-control mb-2" placeholder="Your Name">
+                    <input type="email" id="contactEmail" class="form-control mb-2" placeholder="Your Email">
+                    <textarea id="contactMessage" class="form-control mb-2" rows="3" placeholder="Your Message"></textarea>
+                    <button class="btn btn-success w-100" id="sendMessageBtn"><i class="bi bi-send"></i> Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h5><i class="bi bi-building"></i>Real Estate</h5><p>Your trusted partner in finding the perfect home.</p></div>
+                <div class="col-md-4"><h5>Quick Links</h5><ul class="list-unstyled"><li><a href="#home" class="text-white">Home</a></li><li><a href="#buy-properties" class="text-white">Buy</a></li><li><a href="#rent-properties" class="text-white">Rent</a></li></ul></div>
+                <div class="col-md-4"><h5>Follow Us</h5><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-instagram"></i></a> <a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
+            </div>
+            <hr><p class="text-center mb-0">© 2026 Real Estate | 75+ Properties | Buy & Rent | Compare</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -73,17 +73,6 @@ A **fully responsive real estate listing platform** built with **HTML5, CSS3, Ja
 
 ---
 
-## 📁 Project Structure
-
-```text
-estateindia-pro/
-│
-├── index.html     # Main HTML file (structure)
-├── style.css      # Custom CSS (styling + dark mode)
-├── script.js      # JavaScript (logic + data)
-└── README.md      # Documentation
-```
-
 ### File Breakdown
 
 | File | Lines | Purpose |
